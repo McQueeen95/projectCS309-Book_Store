@@ -1,4 +1,4 @@
-# projectCS309
+# projectCS309 ( Book Store App With MERN Stack )
 
 basic structure of backend {
   /backend
