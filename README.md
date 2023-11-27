@@ -20,6 +20,7 @@ basic structure of backend {
     - userRoutes.js         // Routes for users
     - authRoutes.js         // Routes for authentication
   server.js               // Entry point for the server
+  App.js
 }
 
 basic structure of frontend {
@@ -47,7 +48,6 @@ basic structure of frontend {
     /utils          // Utility functions
       - api.js      // Axios configuration
       - auth.js     // Authentication functions
-    App.js
     index.js        // Entry point for React app
 
 }
