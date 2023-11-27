@@ -2,9 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "E-Commerce WebSite",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/mcqeen95/projectCS309/issues"
   },
-  "homepage": "https://github.com/mcqeen95/projectCS309#readme"
+  "homepage": "https://github.com/mcqeen95/projectCS309#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.1",
+    "nodemon": "^3.0.1"
+  }
 }
