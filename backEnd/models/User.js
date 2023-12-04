@@ -27,5 +27,5 @@ const userSchema =  mongoose.Schema(
     timestamps: true,
   }
 );
-
+   
 module.exports = mongoose.model("User", userSchema);  //  any one import this Schema can use this model
