@@ -1,10 +1,6 @@
 const mongoose = require("mongoose");
 const bookSchema = mongoose.Schema(
   {
-    _id:{
-      type: String,
-      required: [true, "ID is required"],
-    },
     title: {
       type: String,
       required: [true, "Title is required"],
@@ -32,6 +28,11 @@ const bookSchema = mongoose.Schema(
     quantity: {
       type: Number,
       required: false
+    },
+    category: {
+      type: String,
+      enum: ['Scientific books','Islamic books','Histoical books','Stories'],
+      required: [true, "Category is required"]
     }
   },
   {
