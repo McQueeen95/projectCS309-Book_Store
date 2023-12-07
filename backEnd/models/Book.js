@@ -19,7 +19,7 @@ const bookSchema = mongoose.Schema(
     },
     image: {
       type: String,
-      required: false
+      required: [true, "Image is required"]
     },
     reviews: {
       type: Array,
