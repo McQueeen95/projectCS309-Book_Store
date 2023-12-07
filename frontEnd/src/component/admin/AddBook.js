@@ -1,3 +1,5 @@
+// import  { useEffect } from 'react'
+
 import {
   Button,
   Checkbox,
@@ -32,7 +34,7 @@ function AddBook()  {
 
   const sendRequest = async () => {
     await axios
-      .post("http://localhost:5000/books", {
+      .post("http://localhost:3000/books", {
         title: String(inputs.title),
         price: Number(inputs.price),
         rating: Number(inputs.rating),
@@ -41,8 +43,6 @@ function AddBook()  {
         // rating: Number(inputs.rating),
         description: String(inputs.description),
         PublicationDate: String(inputs.PublicationDate),
-        image: String(inputs.image),
-        
         image: String(inputs.image),
         inStock: Boolean(checked),
       })
@@ -159,3 +159,60 @@ function AddBook()  {
 };
 
 export default AddBook;
+// useEffect(() => {
+//   axios.get('http://localhost:8000/getImage')
+//   .then(res => setImage(res.data[0].image))
+//   .catch(err => console.log(err))
+// },[])
+// return (
+//   <div className='addDiv'>
+//           <div style={{width: 'auto'}}>
+//             <input type="file" accept="image/*" onChange={(e) => setFile(e.target.files[0])} />
+//             <button type='submit' onClick={handleUpload}>Upload</button>
+//           </div>
+//           <br/>
+//           <img src={http://localhost:8000/${image}} alt="That's not good" />
+//           <input 
+//             type="text" 
+//             placeholder="Author" 
+//             value={author} 
+//             onChange={(e) => setAuthor(e.target.value)} 
+//             required 
+//           />
+
+//           <input 
+//             type="text" 
+//             placeholder="Title" 
+//             value={title} 
+//             onChange={(e) => setTitle(e.target.value)} 
+//             required 
+//           />
+
+//           <textarea 
+//             placeholder="Description" 
+//             value={description} 
+//             onChange={(e) => setDescription(e.target.value)} 
+//           />
+//           <input 
+//           type="number" 
+//           placeholder="Price" 
+//           value={price} 
+//           onChange={(e) => setPrice(e.target.value)} 
+//           required 
+//         />
+
+//         <select 
+//           value={category} 
+//           onChange={(e) => setCategory(e.target.value)} 
+//           required
+//         >
+//           <option value="">Select category</option>
+//           {categories.map((cat, index) => (
+//             <option key={index} value={cat}>{cat}</option>
+//           ))}
+//         </select>
+
+//         <button type="submit">Add Product</button>
+// </div>
+// )
+//           }
