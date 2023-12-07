@@ -41,6 +41,7 @@ function AddBook()  {
         // rating: Number(inputs.rating),
         description: String(inputs.description),
         PublicationDate: String(inputs.PublicationDate),
+        image: String(inputs.image),
         
         image: String(inputs.image),
         inStock: Boolean(checked),
@@ -131,6 +132,15 @@ function AddBook()  {
           fullWidth
           variant="outlined"
           name="description"
+        />
+        <FormLabel>Image</FormLabel>
+        <TextField
+          value={inputs.image}
+          onChange={handleChange}
+          margin="normal"
+          fullWidth
+          variant="outlined"
+          name="image"
         />
         
         <FormControlLabel
