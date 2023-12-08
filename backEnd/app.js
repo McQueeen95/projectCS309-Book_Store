@@ -1,10 +1,11 @@
 const { express, mongoose, app } = require("./server");
 const cors = require("cors");
-const userRoutes = require("./routes/user-routes")
+const userRoutes = require("./routes/user-routes");
+const shopRoutes = require('./routes/shop-routes');
 const bookRoutes = require("./routes/book-routes");
 const  path = require("path");
 
-const Book = require("./models/book");
+const Book = require("./models/Book")
 
 app.use(cors());
 app.use(express.json()); // this allow us to use json to send and receive data
@@ -39,3 +40,4 @@ app.use('/deletebook', bookRoutes);// delete book by its id
 
 app.use('/users', userRoutes); // routes for users (register, login)
 
+app.use(shopRoutes);

@@ -16,15 +16,23 @@ const bookSchema = mongoose.Schema(
     price: {
       type: Number, 
       required: [true, "Price is required"]
-    },
+    }, 
     image: {
       type: String,
       required: false
     },
-    reviews: {
-      type: Array,
-      required: false
+    rating: {
+      type: Number,
+      default: 0,
+      min: 0,
+      max: 5
     },
+    comments: [
+        {
+          user: String,
+          commnet: String
+        }
+      ],
     quantity: {
       type: Number,
       required: false

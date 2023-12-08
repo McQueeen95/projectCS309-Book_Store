@@ -1,9 +1,13 @@
 const mongoose = require("mongoose");
 const userSchema =  mongoose.Schema(
   {
-    fullName: { 
-      type: String, 
-      required: [true, "Full Name is required"] 
+    firstname: {
+      type: String,
+      required: [true, "First name is required"],
+    },
+    lastname: {
+      type: String,
+      required: [true, "Last name is required"],
     },
     email: { 
       type: String, 
@@ -27,5 +31,5 @@ const userSchema =  mongoose.Schema(
     timestamps: true,
   }
 );
-   
+
 module.exports = mongoose.model("User", userSchema);  //  any one import this Schema can use this model

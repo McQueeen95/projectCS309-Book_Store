@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const HEADERTOP = ({ settoggle, toggle }) => {
+const HEADERTOP = ({ toggle , setToggle }) => {
 
     // import AddBook from "../admin/AddBook";
 
@@ -10,7 +10,7 @@ const HEADERTOP = ({ settoggle, toggle }) => {
 
         return (
             <div className="header-top">
-                <div onClick={() => settoggle(pre => !pre)} className="header-top-menu">
+                <div onClick={() => setToggle(pre => !pre)} className="header-top-menu">
                     {toggle ?
                         <i className="bi bi-x-lg" /> :
                         <i className="bi bi-list"
