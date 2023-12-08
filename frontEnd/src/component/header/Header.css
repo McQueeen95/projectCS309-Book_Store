@@ -103,6 +103,7 @@
     cursor: pointer;
     align-items: center;
     height: 100%;
+    text-decoration: none;
   }
   .navbar-item:hover{
     background-color: snow;
