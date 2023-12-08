@@ -22,6 +22,9 @@ const Navbar=({toggle ,settoggle})=> {
         </Link>
         <Link to="/register" onClick={()=>settoggle(false)}class="nav-item">
           <a class="nav-link" href="#">Register</a>
+          <Link to="/login" onClick={()=>settoggle(false)}class="nav-item">
+          <a class="nav-link" href="#">Login</a>
+        </Link>
         </Link>
       </ul>
     </div>

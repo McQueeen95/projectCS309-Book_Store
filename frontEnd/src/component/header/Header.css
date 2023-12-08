@@ -92,20 +92,26 @@
     margin: 0 20px;
     font-size: 20px;
     font-weight: 300px;
-    padding: 0 50px;
+    padding: 0 55px;
     height: 100%;
     display: flex;
     text-decoration: none;
   }
   .navbar{
-margin-top: 20px;
+margin-top: 30px;
 display: flex;justify-items: center;
 justify-content: center;
 height: 30%;
 box-shadow: 0 0 1px 1px gray;
   }
-  .nav-link{color: black; background-color: rgb(255, 255, 255) ; text-decoration: none;}
-  
+  .nav-link{color: black; 
+    margin-top: 25px;
+    text-decoration: none;}
+    .nav-link:hover{
+        background-color: rgb(65, 105, 105);
+        transition: all 0.1s ease;
+        border-radius: 8px;
+    }
 
 /* .navbar {
     display: flex;
