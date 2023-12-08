@@ -6,7 +6,7 @@ return (
         <Link to="/home" className="header-middle-logo">
         <b>Book</b>
         <i className="bi bi-book"></i>
-        <b>Store</b>
+        <b>Station</b>
         </Link>
         <div className="header-middle-search-bar">
         <input
