@@ -1,4 +1,4 @@
-const Book = require("../models/book");
+const Book = require("../models/Book");
 
 
 
@@ -82,6 +82,29 @@ const deleteBook = async (request,response) => {
     response.status(500).send("Book not found");
   }
 }
+const addReview = async (request,response) => {
+  try {
+    const { user, comment, rating } = request.body;
 
+    const book = await Book.findById(request.params.id);
+    if (!book) {
+      return response.status(404).json({ message: 'Book not found' });
+    }
 
-module.exports = { getAllBooks , getBookById , getBookByTitle , getBookByCategory , search , addBook , updateBook , deleteBook};
+    book.comments = book.comments || [];
+    book.comments.push({ user, comment });
+
+    let totalRating = book.rating * (book.comments.length - 1) + rating;
+    let newRating = totalRating / book.comments.length;
+    book.rating = newRating;
+
+    await book.save()
+    const updatedBook = await Book.findById(request.params.id);
+    response.status(200).json({message: 'Review added successfully', comments: updatedBook.comments });
+  } catch (error) {
+    console.error(error);
+    response.status(500).json({ message: error });
+  }
+} 
+
+module.exports = { getAllBooks , getBookById , getBookByTitle , getBookByCategory , search , addBook , updateBook , deleteBook , addReview };
