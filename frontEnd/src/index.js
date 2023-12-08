@@ -7,6 +7,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import AddBook from './component/admin/AddBook';
 import AdminPage from './component/admin/AdminPage';
+import UpdateBook from './component/admin/UpdateBook';
+import DeleteBook from './component/admin/DeleteBook';
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
     path: "/admin/add",
     element: <AddBook/>
   },
+  {
+    path: "/admin/update",
+    element: <UpdateBook/>
+  },
+  {
+    path: "/admin/delete",
+    element: <DeleteBook/>
+  }
   
 ])
 
