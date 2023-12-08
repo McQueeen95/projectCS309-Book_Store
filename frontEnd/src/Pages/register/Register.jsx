@@ -7,6 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const Register=()=>{
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [confirmPassword, setConfirmPassword] = useState("");
     const [username, setUsername] = useState("");
 
     const formSubmitHandler = (e) => {
@@ -15,8 +16,9 @@ const Register=()=>{
         if(email.trim() === "") return toast.error("Email is required");
         if(username.trim() === "") return toast.error("Username is required");
         if(password.trim() === "") return toast.error("Password is required");
+        if(confirmPassword.trim() === "") return toast.error("Password is required again");
 
-        console.log( {email , password , username} );
+        console.log( {email , password , confirmPassword , username} );
     };
 
 
@@ -32,9 +34,10 @@ const Register=()=>{
                 onChange={e => setPassword(e.target.value)} 
                 type="password" 
                 placeholder="Password" />
+                
                 <input 
-                value={password} 
-                onChange={e => setPassword(e.target.value)} 
+                value={confirmPassword} 
+                onChange={e => setConfirmPassword(e.target.value)} 
                 type="password" 
                 placeholder="Confirm Password" />
 
