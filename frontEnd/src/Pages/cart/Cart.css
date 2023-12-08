@@ -62,6 +62,8 @@
     cursor: pointer;
     padding: 5px;
     font-size: 17px;
+    border-radius: 8px;
+    background-color: lavender;
 }
 
 .cart-item-quantity button:disabled {
