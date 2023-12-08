@@ -36,7 +36,7 @@ const Slider = () => {
           <div className="slide-info-wrapper">
             <h1 className="slide-info-title">Book Store</h1>
             <p className="slide-info-desc">
-              It's not just reading. it's living the adventure
+            A reader lives a thousand lives before he dies . . .
             </p>
           </div>
         </div>
@@ -47,7 +47,7 @@ const Slider = () => {
           <div className="slide-info-wrapper">
             <h1 className="slide-info-title">The Books For Everyone</h1>
             <p className="slide-info-desc">
-              You can read at the bookstore or at home
+            You can never get a cup of tea large enough or a book long enough to suit me.
             </p>
           </div>
         </div>
@@ -58,7 +58,7 @@ const Slider = () => {
           <div className="slide-info-wrapper">
             <h1 className="slide-info-title">Check Out The New Titles</h1>
             <p className="slide-info-desc">
-              We send you the book you want at home
+            “Classic' – a book which people praise and don't read.”
             </p>
           </div>
         </div>

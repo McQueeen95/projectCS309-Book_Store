@@ -22,11 +22,11 @@ const Navbar = ({ toggle, setToggle }) => {
           About Us
         </Link>
         <Link
-          to="/contact"
+          to="/profile"
           onClick={() => setToggle(false)}
           className="navbar-link"
         >
-          Contact Us
+          Profile
         </Link>
         <Link
           to="/register"
