@@ -2,7 +2,7 @@ import React from 'react'
 
 function DeleteBook() {
   return (
-    <div>DeleteBook</div>
+    <div>Here we going to delete book</div>
   )
 }
 
