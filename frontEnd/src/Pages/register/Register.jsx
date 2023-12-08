@@ -8,17 +8,19 @@ const Register=()=>{
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
-    const [username, setUsername] = useState("");
+    const [firstName, setFirstname] = useState("");
+    const [lastName, setLastname] = useState("");
 
     const formSubmitHandler = (e) => {
         e.preventDefault();
 
+        if(firstName.trim() === "") return toast.error("First Name is required");
+        if(lastName.trim() === "") return toast.error("Last Name is required");
         if(email.trim() === "") return toast.error("Email is required");
-        if(username.trim() === "") return toast.error("Username is required");
         if(password.trim() === "") return toast.error("Password is required");
-        if(confirmPassword.trim() === "") return toast.error("Password is required again");
+        if(confirmPassword.trim() === "") return toast.error("Confirming Password is required again");
 
-        console.log( {email , password , confirmPassword , username} );
+        console.log( {firstName , lastName , email , password , confirmPassword } );
     };
 
 
@@ -27,8 +29,10 @@ const Register=()=>{
             <ToastContainer/>
             <h1 className="form-title">Create a new account</h1>
             <form onSubmit={formSubmitHandler} className="form">
+                <input value={firstName} onChange={e => setFirstname(e.target.value)} type="firstName" placeholder="First name" />
+                <input value={lastName} onChange={e => setLastname(e.target.value)} type="lastname" placeholder="Last name" />
                 <input value={email} onChange={e => setEmail(e.target.value)} type="email" placeholder="Email" />
-                <input value={username} onChange={e => setUsername(e.target.value)} type="username" placeholder="Username" />
+                
                 <input 
                 value={password} 
                 onChange={e => setPassword(e.target.value)} 
