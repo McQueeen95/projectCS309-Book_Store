@@ -197,6 +197,7 @@ box-shadow: 0 0 1px 1px gray;
         align-items: flex-start;
         z-index: 999;
         transition: all 1s ease;
+        display: none;
         
     }
     .navbar-nav
@@ -206,21 +207,21 @@ box-shadow: 0 0 1px 1px gray;
         height: max-content;
         width: 110%;
         padding-right: 30px;
-        background-color: floralwhite;
+     
         
 }
 .nav-item a{    
 
     width: 112%;
-    background-color: floralwhite;
+ 
 
 
 }
 .nav-item{
     
-    width: 110%;
+    width: 90%;
     padding: 5px;
-    background-color: aliceblue;
+ 
 
 }
 .nav-link{
