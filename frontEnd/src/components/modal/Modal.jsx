@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Rating from "../book-slider/Rating";
-import "./modal.css";
 import {useState,useContext} from "react";
 import BookStoreContext from "../../context/bookStorContext";
+import "./modal.css"
 
 const Modal = ({ bookData, setOpenModal }) => {
   const { addToCart } = useContext(BookStoreContext);
