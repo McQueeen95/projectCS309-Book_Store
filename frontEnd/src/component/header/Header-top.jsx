@@ -1,18 +1,33 @@
-const HEADERTOP=()=>{
 
-    return(
+import { Link } from "react-router-dom";
+
+const HEADERTOP=({settoggle,toggle})=>{
+
+// import AddBook from "../admin/AddBook";
+return(
+
  <div className="header-top">
-<div className="header-top-menu">
+<div onClick={()=>settoggle(pre=>!pre)} className="header-top-menu">
+    {toggle?
+     <i className="bi bi-x-lg"/>:
     <i className="bi bi-list"
-    ></i>
+    ></i>}
+   
 </div>
 <div className="header-top-phone"> <i className='bi bi-telephone-fill'></i>123-456-789</div>
 <div className="header-top-text">Welcome To Book Store</div>
-<div className="header-top-login" >
+<Link to="/login" className="header-top-login" >
     <i className="bi bi-person-fill" >Login</i>
-</div>
-    </div>
 
-    )
-}
+</Link>
+
+    
+</div>
+
+    );
+
+
+    }
+
+
 export default HEADERTOP;

@@ -20,6 +20,19 @@ const bookSchema = mongoose.Schema(
     image: {
       type: String,
       required: false
+    },
+    reviews: {
+      type: Array,
+      required: false
+    },
+    quantity: {
+      type: Number,
+      required: false
+    },
+    category: {
+      type: String,
+      enum: ['Scientific books','Islamic books','Histoical books','Stories'],
+      required: [true, "Category is required"]
     }
   },
   {
