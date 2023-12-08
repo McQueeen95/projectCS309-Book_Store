@@ -16,12 +16,15 @@ import { useNavigate } from "react-router-dom";
 function AddBook()  {
   const history = useNavigate();
   const [inputs, setInputs] = useState({
-    name: "",
-    description: "",
+    title: "",
     price: "",
+    rating: "",
     author: "",
-
+    reviews: "",
+    description: "",
+    PublicationDate: "",
     image: "",
+    inStock: "",
   });
   const [checked, setChecked] = useState(false);
   const handleChange = (e) => {
@@ -40,7 +43,6 @@ function AddBook()  {
         rating: Number(inputs.rating),
         author: String(inputs.author),
         reviews: String(inputs.reviews),
-        // rating: Number(inputs.rating),
         description: String(inputs.description),
         PublicationDate: String(inputs.PublicationDate),
         image: String(inputs.image),
@@ -70,12 +72,12 @@ function AddBook()  {
       >
         <FormLabel>Title</FormLabel>
         <TextField
-          value={inputs.name}
+          value={inputs.title}
           onChange={handleChange}
           margin="normal"
           fullWidth
           variant="outlined"
-          name="name"
+          name="title"
         />
          <FormLabel>Price</FormLabel>
         <TextField
@@ -112,7 +114,7 @@ function AddBook()  {
           margin="normal"
           fullWidth
           variant="outlined"
-          name="name"
+          name="rating"
         />
 
         <FormLabel>Description</FormLabel>
@@ -124,14 +126,14 @@ function AddBook()  {
           variant="outlined"
           name="description"
         />
-        <FormLabel>PublicationDate</FormLabel>
+        <FormLabel>publicationDate</FormLabel>
         <TextField
           value={inputs.PublicationDate}
           onChange={handleChange}
           margin="normal"
           fullWidth
           variant="outlined"
-          name="description"
+          name="PublicationDate"
         />
         <FormLabel>Image</FormLabel>
         <TextField
