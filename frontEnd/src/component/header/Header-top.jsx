@@ -1,6 +1,6 @@
 // import AddBook from "../admin/AddBook";
 import React from 'react';
-
+import {Link} from 'react-router-dom';
 
 const HEADERTOP=()=>{
 
@@ -12,10 +12,10 @@ const HEADERTOP=()=>{
 </div>
 <div className="header-top-phone"> <i className='bi bi-telephone-fill'></i>123-456-789</div>
 <div className="header-top-text">Welcome To Book Store</div>
-<div className="header-top-login" >
+<Link to='/login' className="header-top-login" >
     <i className="bi bi-person-fill" >Login</i>
     
-</div>
+</Link>
     </div>
 
     )
