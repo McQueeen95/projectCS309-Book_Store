@@ -4,11 +4,11 @@ import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
+
 import AddBook from './component/admin/AddBook';
 import AdminPage from './component/admin/AdminPage';
-import LoginPage from './Pages/LoginPage';
-
-
+import UpdateBook from './component/admin/UpdateBook';
+import DeleteBook from './component/admin/DeleteBook';
 
 const router = createBrowserRouter([
   {
@@ -24,9 +24,13 @@ const router = createBrowserRouter([
     element: <AddBook/>
   },
   {
-    path: "/login",
-    element: <LoginPage/>
+    path: "/admin/update",
+    element: <UpdateBook/>
   },
+  {
+    path: "/admin/delete",
+    element: <DeleteBook/>
+  }
   
 ])
 
