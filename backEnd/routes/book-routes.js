@@ -1,7 +1,6 @@
 const express  = require("express");
 const router = express.Router();
 const booksController = require("../controllers/book-controller");
-const middle = require("../middleware/middle")
 
 router.get('/',booksController.getAllBooks ) // show all books by this API: (http://localhost:8000/books)
 router.get('/id/:id',booksController.getBookById ) // show one book by its id by this API: (http://localhost:8000/books/id/:id)
@@ -10,7 +9,7 @@ router.get('/category/:category',booksController.getBookByCategory ) // show all
 router.get('/search/:keyword',booksController.search ) // show all books that have the same keyword by this API: (http://localhost:8000/books/search/:keyword)
 
 
-router.post('/',middle.single('file'),booksController.addBook) // add new Book by this API: (http://localhost:8000/addbook)
+router.post('/',booksController.addBook) // add new Book by this API: (http://localhost:8000/addbook)
 
 router.put('/:id',booksController.updateBook) // update book by its id by this API: (http://localhost:8000/updatebook/:id)
 
