@@ -10,6 +10,7 @@ router.get('/search/:keyword',booksController.search ) // show all books that ha
 
 
 router.post('/',booksController.addBook) // add new Book by this API: (http://localhost:8000/addbook)
+router.post('/addreview/:id',booksController.addReview) // add new review by this API: (http://localhost:8000/books/addreview/:id)
 
 router.put('/:id',booksController.updateBook) // update book by its id by this API: (http://localhost:8000/updatebook/:id)
 
