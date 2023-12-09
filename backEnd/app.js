@@ -4,8 +4,8 @@ const userRoutes = require("./routes/user-routes");
 const shopRoutes = require('./routes/shop-routes');
 const bookRoutes = require("./routes/book-routes");
 const  path = require("path");
-
 const Book = require("./models/Book")
+
 
 app.use(cors());
 app.use(express.json()); // this allow us to use json to send and receive data
