@@ -21,7 +21,7 @@ function App() {
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/book/:id" element={<BookPage/>}/>
         <Route path="/about" element={<About/>}/>
-        <Route path="/AddBook" element={<AddBook/>}/>
+        <Route path="/admin/AddBook" element={<AddBook/>}/>
 
 
 <Route path="/cart" element={<Cart/>}/>
