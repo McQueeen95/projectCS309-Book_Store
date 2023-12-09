@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import About from "../../data/About";
 import HomePage from "../../Pages/home/HomePage";
 import Authors from "../../Pages/authors/Authors";
 const Navbar=({toggle ,settoggle})=> {
@@ -7,6 +8,7 @@ const Navbar=({toggle ,settoggle})=> {
   
     <nav style={{left:toggle&&"0"}} class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container">
+      
       <ul class="navbar-nav">
         <Link to="/home" onClick={()=>settoggle(false)} class="nav-item">
           <a class="nav-link" href="#">Home</a>
@@ -16,6 +18,7 @@ const Navbar=({toggle ,settoggle})=> {
         </Link>
         <Link to="/about" class="nav-item">
           <a  onClick={()=>settoggle(false)}class="nav-link" href="#">About Us</a>
+          <a class="nav-link" href="#">About</a>
         </Link>
         <Link to="/contactus" onClick={()=>settoggle(false)}class="nav-item">
           <a class="nav-link" href="#">Contact</a>
@@ -24,6 +27,9 @@ const Navbar=({toggle ,settoggle})=> {
           <a class="nav-link" href="#">Register</a>
           <Link to="/login" onClick={()=>settoggle(false)}class="nav-item">
           <a class="nav-link" href="#">Login</a>
+        </Link>
+        <Link to="/addbook" onClick={()=>settoggle(false)} class="nav-item">
+          <a class="nav-link" href="#">AddBook</a>
         </Link>
         </Link>
       </ul>

@@ -7,6 +7,8 @@ import Cart from "./Pages/cart/Cart"
 import BookPage from "./Pages/book/BookPage"
 import Login from "./Pages/login/Login";
 import Register from "./Pages/register/Register";
+import About from "./data/About";
+import AddBook from "./component/admin/AddBook";
 function App() {
   return (
     <BrowserRouter>
@@ -18,6 +20,9 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/cart" element={<Cart/>}/>
         <Route path="/book/:id" element={<BookPage/>}/>
+        <Route path="/about" element={<About/>}/>
+        <Route path="/AddBook" element={<AddBook/>}/>
+
 
 <Route path="/cart" element={<Cart/>}/>
         
